@@ -1,0 +1,26 @@
+plugins {
+    id 'java'
+}
+
+group 'one.innovation.digital'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+
+    //Hibernate
+    implementation group: 'org.hibernate', name: 'hibernate-gradle-plugin', version: '5.5.4.Final'
+    //JPA
+    //implementation group: 'javax.persistence', name: 'javax.persistence-api', version: '2.2'
+    //DRIVER JDBC para o MySQL
+    implementation group: 'mysql', name: 'mysql-connector-java', version: '8.0.26'
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.0'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.0'
+}
+
+test {
+    useJUnitPlatform()
+}
